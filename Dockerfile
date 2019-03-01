@@ -3,7 +3,7 @@ FROM node:alpine AS builder
 
 WORKDIR /app
 COPY package.json .
-RUN npm config set proxy http://proxy.adnovum.vn:3128/
+# RUN npm config set proxy http://proxy.adnovum.vn:3128/
 RUN npm install
 COPY . .
 RUN npm run build
